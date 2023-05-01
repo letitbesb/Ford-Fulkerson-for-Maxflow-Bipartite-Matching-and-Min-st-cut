@@ -1,0 +1,207 @@
+\hypertarget{class_graph}{}\doxysection{Graph Class Reference}
+\label{class_graph}\index{Graph@{Graph}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_graph_a7b14c9bc0b5fbf50165aaf92f4aeef1d}{Graph}} (int \mbox{\hyperlink{class_graph_a81a76a428e630453ef019a15b9092967}{n}})
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_graph}{Graph}} object with the given number of vertices. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a6d157fc6b13b7af810657a6f48b9df2e}{add\+\_\+edge}} (int u, int v, int capacity)
+\begin{DoxyCompactList}\small\item\em Add an edge to the graph with the given source, destination, and capacity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_af5d3eeba7b39b39b3e35d3ccd7182608}{create\+\_\+residual\+\_\+graph}} ()
+\begin{DoxyCompactList}\small\item\em Creates the residual graph of the current graph. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_graph_a9de61c9b865602dcf31be86b07f092ca}{dfs}} (int source, int sink, vector$<$ \mbox{\hyperlink{struct_residual_edge}{Residual\+Edge}} $\ast$ $>$ \&parent, vector$<$ bool $>$ \&visited)
+\begin{DoxyCompactList}\small\item\em Performs a depth-\/first search (DFS) to find an augmenting path in the residual graph. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{struct_residual_edge}{Residual\+Edge}} $\ast$ $>$ \mbox{\hyperlink{class_graph_a5ad9df236a5baeb91e0fc041445254da}{find\+\_\+augmenting\+\_\+path}} (int source, int sink)
+\begin{DoxyCompactList}\small\item\em Finds an augmenting path in the residual graph using DFS. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_graph_a812568b13767d84df0bb5f2d98aba4d5}{max\+\_\+flow}} (int source, int sink)
+\begin{DoxyCompactList}\small\item\em Calculates the maximum flow in the graph using the Ford-\/\+Fulkerson algorithm. \end{DoxyCompactList}\item 
+vector$<$ pair$<$ int, int $>$ $>$ \mbox{\hyperlink{class_graph_a3fdfd02981029592d2af22766d801ff1}{st\+\_\+cut}} (int source, int sink)
+\item 
+void \mbox{\hyperlink{class_graph_a5fdb7621a792f92a1a3d54b6b6e090cb}{dfs\+\_\+cut}} (int u, int sink, vector$<$ bool $>$ \&visited)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_graph_a81a76a428e630453ef019a15b9092967}{n}}
+\item 
+vector$<$ vector$<$ \mbox{\hyperlink{struct_edge}{Edge}} $\ast$ $>$ $>$ \mbox{\hyperlink{class_graph_a66b25ada2fa2cdb38e23355dcf877580}{adj}}
+\item 
+vector$<$ vector$<$ \mbox{\hyperlink{struct_residual_edge}{Residual\+Edge}} $\ast$ $>$ $>$ \mbox{\hyperlink{class_graph_a644f671bb5dbebee4189b13ef2db8152}{residual\+\_\+adj}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_graph_a7b14c9bc0b5fbf50165aaf92f4aeef1d}\label{class_graph_a7b14c9bc0b5fbf50165aaf92f4aeef1d}} 
+\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{Graph()}{Graph()}}
+{\footnotesize\ttfamily Graph\+::\+Graph (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_graph}{Graph}} object with the given number of vertices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The number of vertices in the graph. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graph_a6d157fc6b13b7af810657a6f48b9df2e}\label{class_graph_a6d157fc6b13b7af810657a6f48b9df2e}} 
+\index{Graph@{Graph}!add\_edge@{add\_edge}}
+\index{add\_edge@{add\_edge}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{add\_edge()}{add\_edge()}}
+{\footnotesize\ttfamily void Graph\+::add\+\_\+edge (\begin{DoxyParamCaption}\item[{int}]{u,  }\item[{int}]{v,  }\item[{int}]{capacity }\end{DoxyParamCaption})}
+
+
+
+Add an edge to the graph with the given source, destination, and capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & An add\+Edge\+Obj object containing the source, destination, and capacity of the edge to be added.\\
+\hline
+\end{DoxyParams}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & An add\+Edge\+Obj object containing the source, destination, and capacity of the edge to be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_af5d3eeba7b39b39b3e35d3ccd7182608}\label{class_graph_af5d3eeba7b39b39b3e35d3ccd7182608}} 
+\index{Graph@{Graph}!create\_residual\_graph@{create\_residual\_graph}}
+\index{create\_residual\_graph@{create\_residual\_graph}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{create\_residual\_graph()}{create\_residual\_graph()}}
+{\footnotesize\ttfamily void Graph\+::create\+\_\+residual\+\_\+graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates the residual graph of the current graph. 
+
+Finds an augmenting path in the residual graph using DFS.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vv} & An aug\+Path\+Obj object containing the source and sink vertices. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of \mbox{\hyperlink{struct_residual_edge}{Residual\+Edge}} pointers representing the augmenting path. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a9de61c9b865602dcf31be86b07f092ca}\label{class_graph_a9de61c9b865602dcf31be86b07f092ca}} 
+\index{Graph@{Graph}!dfs@{dfs}}
+\index{dfs@{dfs}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{dfs()}{dfs()}}
+{\footnotesize\ttfamily bool Graph\+::dfs (\begin{DoxyParamCaption}\item[{int}]{s,  }\item[{int}]{t,  }\item[{vector$<$ \mbox{\hyperlink{struct_residual_edge}{Residual\+Edge}} $\ast$ $>$ \&}]{parent,  }\item[{vector$<$ bool $>$ \&}]{visited }\end{DoxyParamCaption})}
+
+
+
+Performs a depth-\/first search (DFS) to find an augmenting path in the residual graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The current vertex being visited. \\
+\hline
+{\em t} & The sink vertex. \\
+\hline
+{\em parent} & A vector of \mbox{\hyperlink{struct_residual_edge}{Residual\+Edge}} pointers representing the parent of each vertex in the DFS tree. \\
+\hline
+{\em visited} & A vector of booleans representing whether each vertex has been visited or not. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if an augmenting path is found, false otherwise.
+\end{DoxyReturn}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The current vertex being visited. \\
+\hline
+{\em t} & The sink vertex. \\
+\hline
+{\em parent} & A vector of \mbox{\hyperlink{struct_residual_edge}{Residual\+Edge}} pointers representing the parent of each vertex in the DFS tree. \\
+\hline
+{\em visited} & A vector of booleans representing whether each vertex has been visited or not. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if an augmenting path is found, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a5fdb7621a792f92a1a3d54b6b6e090cb}\label{class_graph_a5fdb7621a792f92a1a3d54b6b6e090cb}} 
+\index{Graph@{Graph}!dfs\_cut@{dfs\_cut}}
+\index{dfs\_cut@{dfs\_cut}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{dfs\_cut()}{dfs\_cut()}}
+{\footnotesize\ttfamily void Graph\+::dfs\+\_\+cut (\begin{DoxyParamCaption}\item[{int}]{u,  }\item[{int}]{sink,  }\item[{vector$<$ bool $>$ \&}]{visited }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_graph_a5ad9df236a5baeb91e0fc041445254da}\label{class_graph_a5ad9df236a5baeb91e0fc041445254da}} 
+\index{Graph@{Graph}!find\_augmenting\_path@{find\_augmenting\_path}}
+\index{find\_augmenting\_path@{find\_augmenting\_path}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{find\_augmenting\_path()}{find\_augmenting\_path()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{struct_residual_edge}{Residual\+Edge}} $\ast$ $>$ Graph\+::find\+\_\+augmenting\+\_\+path (\begin{DoxyParamCaption}\item[{int}]{source,  }\item[{int}]{sink }\end{DoxyParamCaption})}
+
+
+
+Finds an augmenting path in the residual graph using DFS. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vv} & An aug\+Path\+Obj object containing the source and sink vertices. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of \mbox{\hyperlink{struct_residual_edge}{Residual\+Edge}} pointers representing the augmenting path. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a812568b13767d84df0bb5f2d98aba4d5}\label{class_graph_a812568b13767d84df0bb5f2d98aba4d5}} 
+\index{Graph@{Graph}!max\_flow@{max\_flow}}
+\index{max\_flow@{max\_flow}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{max\_flow()}{max\_flow()}}
+{\footnotesize\ttfamily int Graph\+::max\+\_\+flow (\begin{DoxyParamCaption}\item[{int}]{source,  }\item[{int}]{sink }\end{DoxyParamCaption})}
+
+
+
+Calculates the maximum flow in the graph using the Ford-\/\+Fulkerson algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mm} & A max\+Flow\+Obj object containing the source and sink vertices. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The maximum flow in the graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a3fdfd02981029592d2af22766d801ff1}\label{class_graph_a3fdfd02981029592d2af22766d801ff1}} 
+\index{Graph@{Graph}!st\_cut@{st\_cut}}
+\index{st\_cut@{st\_cut}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{st\_cut()}{st\_cut()}}
+{\footnotesize\ttfamily vector$<$ pair$<$ int, int $>$ $>$ Graph\+::st\+\_\+cut (\begin{DoxyParamCaption}\item[{int}]{source,  }\item[{int}]{sink }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_graph_a66b25ada2fa2cdb38e23355dcf877580}\label{class_graph_a66b25ada2fa2cdb38e23355dcf877580}} 
+\index{Graph@{Graph}!adj@{adj}}
+\index{adj@{adj}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{adj}{adj}}
+{\footnotesize\ttfamily vector$<$vector$<$\mbox{\hyperlink{struct_edge}{Edge}} $\ast$$>$ $>$ Graph\+::adj}
+
+\mbox{\Hypertarget{class_graph_a81a76a428e630453ef019a15b9092967}\label{class_graph_a81a76a428e630453ef019a15b9092967}} 
+\index{Graph@{Graph}!n@{n}}
+\index{n@{n}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily int Graph\+::n}
+
+\mbox{\Hypertarget{class_graph_a644f671bb5dbebee4189b13ef2db8152}\label{class_graph_a644f671bb5dbebee4189b13ef2db8152}} 
+\index{Graph@{Graph}!residual\_adj@{residual\_adj}}
+\index{residual\_adj@{residual\_adj}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{residual\_adj}{residual\_adj}}
+{\footnotesize\ttfamily vector$<$vector$<$\mbox{\hyperlink{struct_residual_edge}{Residual\+Edge}} $\ast$$>$ $>$ Graph\+::residual\+\_\+adj}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_f_f__modified_8cpp}{FF\+\_\+modified.\+cpp}}\end{DoxyCompactItemize}

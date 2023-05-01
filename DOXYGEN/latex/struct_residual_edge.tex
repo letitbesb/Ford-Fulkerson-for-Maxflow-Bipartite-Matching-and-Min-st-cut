@@ -1,0 +1,90 @@
+\hypertarget{struct_residual_edge}{}\doxysection{Residual\+Edge Struct Reference}
+\label{struct_residual_edge}\index{ResidualEdge@{ResidualEdge}}
+
+
+Represents a residual edge in a graph, which is an \mbox{\hyperlink{struct_edge}{Edge}} with additional information.  
+
+
+Inheritance diagram for Residual\+Edge\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_residual_edge}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_residual_edge_a75bfa5e871a359212d9e443c2db1b801}{Residual\+Edge}} (int \mbox{\hyperlink{struct_edge_a60a34279415f9bff8844f0c0a8675ae3}{u}}, int \mbox{\hyperlink{struct_edge_aac59de4b133921591182667a1e656e18}{v}}, int \mbox{\hyperlink{struct_edge_ad606e57bc68898672de1727e299a7d65}{capacity}}, int \mbox{\hyperlink{struct_residual_edge_aded9c032da0545322e1e1aeb372e9e19}{forward\+\_\+edge\+\_\+idx}}, int \mbox{\hyperlink{struct_residual_edge_a5db473b27694329e66b3b2f1255e5dc2}{backward\+\_\+edge\+\_\+idx}})
+\begin{DoxyCompactList}\small\item\em Constructor for creating a new \mbox{\hyperlink{struct_residual_edge}{Residual\+Edge}} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{struct_edge}{Edge}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_edge_ac99a57d6d5048307231a22ae3e8934db}{Edge}} (int \mbox{\hyperlink{struct_edge_a60a34279415f9bff8844f0c0a8675ae3}{u}}, int \mbox{\hyperlink{struct_edge_aac59de4b133921591182667a1e656e18}{v}}, int \mbox{\hyperlink{struct_edge_ad606e57bc68898672de1727e299a7d65}{capacity}})
+\begin{DoxyCompactList}\small\item\em Constructor for creating a new \mbox{\hyperlink{struct_edge}{Edge}} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_residual_edge_aded9c032da0545322e1e1aeb372e9e19}{forward\+\_\+edge\+\_\+idx}}
+\item 
+int \mbox{\hyperlink{struct_residual_edge_a5db473b27694329e66b3b2f1255e5dc2}{backward\+\_\+edge\+\_\+idx}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes inherited from \mbox{\hyperlink{struct_edge}{Edge}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_edge_a60a34279415f9bff8844f0c0a8675ae3}{u}}
+\item 
+int \mbox{\hyperlink{struct_edge_aac59de4b133921591182667a1e656e18}{v}}
+\item 
+int \mbox{\hyperlink{struct_edge_ad606e57bc68898672de1727e299a7d65}{capacity}}
+\item 
+int \mbox{\hyperlink{struct_edge_a189258d91c07f4a0b76798cb7fe2b112}{flow}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a residual edge in a graph, which is an \mbox{\hyperlink{struct_edge}{Edge}} with additional information. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_residual_edge_a75bfa5e871a359212d9e443c2db1b801}\label{struct_residual_edge_a75bfa5e871a359212d9e443c2db1b801}} 
+\index{ResidualEdge@{ResidualEdge}!ResidualEdge@{ResidualEdge}}
+\index{ResidualEdge@{ResidualEdge}!ResidualEdge@{ResidualEdge}}
+\doxysubsubsection{\texorpdfstring{ResidualEdge()}{ResidualEdge()}}
+{\footnotesize\ttfamily Residual\+Edge\+::\+Residual\+Edge (\begin{DoxyParamCaption}\item[{int}]{u,  }\item[{int}]{v,  }\item[{int}]{capacity,  }\item[{int}]{forward\+\_\+edge\+\_\+idx,  }\item[{int}]{backward\+\_\+edge\+\_\+idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for creating a new \mbox{\hyperlink{struct_residual_edge}{Residual\+Edge}} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & The source vertex of the residual edge. \\
+\hline
+{\em v} & The destination vertex of the residual edge. \\
+\hline
+{\em capacity} & The capacity of the residual edge. \\
+\hline
+{\em forward\+\_\+edge\+\_\+idx} & The index of the corresponding forward edge in the adjacency list. \\
+\hline
+{\em backward\+\_\+edge\+\_\+idx} & The index of the corresponding backward edge in the adjacency list. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_residual_edge_a5db473b27694329e66b3b2f1255e5dc2}\label{struct_residual_edge_a5db473b27694329e66b3b2f1255e5dc2}} 
+\index{ResidualEdge@{ResidualEdge}!backward\_edge\_idx@{backward\_edge\_idx}}
+\index{backward\_edge\_idx@{backward\_edge\_idx}!ResidualEdge@{ResidualEdge}}
+\doxysubsubsection{\texorpdfstring{backward\_edge\_idx}{backward\_edge\_idx}}
+{\footnotesize\ttfamily int Residual\+Edge\+::backward\+\_\+edge\+\_\+idx}
+
+\mbox{\Hypertarget{struct_residual_edge_aded9c032da0545322e1e1aeb372e9e19}\label{struct_residual_edge_aded9c032da0545322e1e1aeb372e9e19}} 
+\index{ResidualEdge@{ResidualEdge}!forward\_edge\_idx@{forward\_edge\_idx}}
+\index{forward\_edge\_idx@{forward\_edge\_idx}!ResidualEdge@{ResidualEdge}}
+\doxysubsubsection{\texorpdfstring{forward\_edge\_idx}{forward\_edge\_idx}}
+{\footnotesize\ttfamily int Residual\+Edge\+::forward\+\_\+edge\+\_\+idx}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_f_f__modified_8cpp}{FF\+\_\+modified.\+cpp}}\end{DoxyCompactItemize}

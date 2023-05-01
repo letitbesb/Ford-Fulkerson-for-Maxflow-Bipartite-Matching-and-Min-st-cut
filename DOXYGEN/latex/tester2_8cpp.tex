@@ -1,0 +1,194 @@
+\hypertarget{tester2_8cpp}{}\doxysection{tester2.\+cpp File Reference}
+\label{tester2_8cpp}\index{tester2.cpp@{tester2.cpp}}
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$stack$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_coordinate}{Coordinate}}
+\begin{DoxyCompactList}\small\item\em Struct representing a Coordinates with x and y values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}}~3000
+\item 
+\#define \mbox{\hyperlink{tester2_8cpp_a2d8f2aad31dfbffc307bcd227de3dd64}{INFINITY\+\_\+\+VALUE}}~numeric\+\_\+limits$<$double$>$\+::infinity()
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::chrono\+::high\+\_\+resolution\+\_\+clock \mbox{\hyperlink{tester2_8cpp_a84f79c1feb804b7c4e7620b7f8a44b3a}{High\+Res\+Clock}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{tester2_8cpp_a22b82a066f2726f70c34841382ba66e0}{find\+Best\+Fit\+Line}} (int num\+\_\+points, double x\+\_\+sum, double y\+\_\+sum, double xy\+\_\+sum, double x2\+\_\+sum, double \&slope, double \&intercept)
+\begin{DoxyCompactList}\small\item\em Calculates the slope and intercept for the best fit line given a set of points. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tester2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_coordinate}{Coordinate}} \mbox{\hyperlink{tester2_8cpp_a0f909a257778797fe47549153b001544}{coordinates}} \mbox{[}\mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}}+1\mbox{]}
+\item 
+double \mbox{\hyperlink{tester2_8cpp_ae5366b90a6f3db17475f603bcd1d2d27}{cumul\+\_\+x}} \mbox{[}\mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}}+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array storing the cumulative sum of x values up to each point. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{tester2_8cpp_af942043bb8062c74e897f795b6de56ab}{cumul\+\_\+y}} \mbox{[}\mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}}+1\mbox{]}
+\item 
+double \mbox{\hyperlink{tester2_8cpp_af806df204d620c0364f9572ff470ac38}{cumul\+\_\+xy}} \mbox{[}\mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}}+1\mbox{]}
+\item 
+double \mbox{\hyperlink{tester2_8cpp_a4dc8d68b2b76f7710c52f8f1730461b2}{cumul\+\_\+x\+Sqr}} \mbox{[}\mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}}+1\mbox{]}
+\item 
+double \mbox{\hyperlink{tester2_8cpp_a0c6d4056454e6bad5384616bd75b0880}{line\+\_\+slope}} \mbox{[}\mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}}+1\mbox{]}\mbox{[}\mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}}+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em 2D array storing the slope of the line between two points. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{tester2_8cpp_a87154be74cc5896df90c2ba88acc2647}{line\+\_\+intercept}} \mbox{[}\mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}}+1\mbox{]}\mbox{[}\mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}}+1\mbox{]}
+\item 
+double \mbox{\hyperlink{tester2_8cpp_a099b9f286471027106d682d1a555f44b}{Error}} \mbox{[}\mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}}+1\mbox{]}\mbox{[}\mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}}+1\mbox{]}
+\item 
+double \mbox{\hyperlink{tester2_8cpp_a1cf84905efbbdeed288cf810522b71b8}{optimal\+\_\+solution}} \mbox{[}\mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}}+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array storing the optimal solution error for each point. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{tester2_8cpp_a3112916b60688229370d9b35d0dc0aa3}{optimal\+\_\+segment}} \mbox{[}\mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}}+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array storing the optimal solution segment starting point for each point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{tester2_8cpp_a2d8f2aad31dfbffc307bcd227de3dd64}\label{tester2_8cpp_a2d8f2aad31dfbffc307bcd227de3dd64}} 
+\index{tester2.cpp@{tester2.cpp}!INFINITY\_VALUE@{INFINITY\_VALUE}}
+\index{INFINITY\_VALUE@{INFINITY\_VALUE}!tester2.cpp@{tester2.cpp}}
+\doxysubsubsection{\texorpdfstring{INFINITY\_VALUE}{INFINITY\_VALUE}}
+{\footnotesize\ttfamily \#define INFINITY\+\_\+\+VALUE~numeric\+\_\+limits$<$double$>$\+::infinity()}
+
+\mbox{\Hypertarget{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}\label{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}} 
+\index{tester2.cpp@{tester2.cpp}!MAX\_POINTS@{MAX\_POINTS}}
+\index{MAX\_POINTS@{MAX\_POINTS}!tester2.cpp@{tester2.cpp}}
+\doxysubsubsection{\texorpdfstring{MAX\_POINTS}{MAX\_POINTS}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+POINTS~3000}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{tester2_8cpp_a84f79c1feb804b7c4e7620b7f8a44b3a}\label{tester2_8cpp_a84f79c1feb804b7c4e7620b7f8a44b3a}} 
+\index{tester2.cpp@{tester2.cpp}!HighResClock@{HighResClock}}
+\index{HighResClock@{HighResClock}!tester2.cpp@{tester2.cpp}}
+\doxysubsubsection{\texorpdfstring{HighResClock}{HighResClock}}
+{\footnotesize\ttfamily typedef std\+::chrono\+::high\+\_\+resolution\+\_\+clock \mbox{\hyperlink{tester2_8cpp_a84f79c1feb804b7c4e7620b7f8a44b3a}{High\+Res\+Clock}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{tester2_8cpp_a22b82a066f2726f70c34841382ba66e0}\label{tester2_8cpp_a22b82a066f2726f70c34841382ba66e0}} 
+\index{tester2.cpp@{tester2.cpp}!findBestFitLine@{findBestFitLine}}
+\index{findBestFitLine@{findBestFitLine}!tester2.cpp@{tester2.cpp}}
+\doxysubsubsection{\texorpdfstring{findBestFitLine()}{findBestFitLine()}}
+{\footnotesize\ttfamily void find\+Best\+Fit\+Line (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+points,  }\item[{double}]{x\+\_\+sum,  }\item[{double}]{y\+\_\+sum,  }\item[{double}]{xy\+\_\+sum,  }\item[{double}]{x2\+\_\+sum,  }\item[{double \&}]{slope,  }\item[{double \&}]{intercept }\end{DoxyParamCaption})}
+
+
+
+Calculates the slope and intercept for the best fit line given a set of points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj.\+num\+\_\+p} & The number of points in the dataset. \\
+\hline
+{\em obj.\+xs} & The sum of the x values in the dataset. \\
+\hline
+{\em obj.\+ys} & The sum of the y values in the dataset. \\
+\hline
+{\em obj.\+xys} & The sum of the product of x and y values in the dataset. \\
+\hline
+{\em x2\+\_\+sum} & The sum of the square of the x values in the dataset. \\
+\hline
+{\em slope} & The slope of the best fit line, passed by reference. \\
+\hline
+{\em intercept} & The intercept of the best fit line, passed by reference. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{tester2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{tester2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{tester2.cpp@{tester2.cpp}!main@{main}}
+\index{main@{main}!tester2.cpp@{tester2.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{tester2_8cpp_a0f909a257778797fe47549153b001544}\label{tester2_8cpp_a0f909a257778797fe47549153b001544}} 
+\index{tester2.cpp@{tester2.cpp}!coordinates@{coordinates}}
+\index{coordinates@{coordinates}!tester2.cpp@{tester2.cpp}}
+\doxysubsubsection{\texorpdfstring{coordinates}{coordinates}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_coordinate}{Coordinate}} coordinates\mbox{[}\mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}} + 1\mbox{]}}
+
+\mbox{\Hypertarget{tester2_8cpp_ae5366b90a6f3db17475f603bcd1d2d27}\label{tester2_8cpp_ae5366b90a6f3db17475f603bcd1d2d27}} 
+\index{tester2.cpp@{tester2.cpp}!cumul\_x@{cumul\_x}}
+\index{cumul\_x@{cumul\_x}!tester2.cpp@{tester2.cpp}}
+\doxysubsubsection{\texorpdfstring{cumul\_x}{cumul\_x}}
+{\footnotesize\ttfamily double cumul\+\_\+x\mbox{[}\mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}}+1\mbox{]}}
+
+
+
+Array storing the cumulative sum of x values up to each point. 
+
+\mbox{\Hypertarget{tester2_8cpp_a4dc8d68b2b76f7710c52f8f1730461b2}\label{tester2_8cpp_a4dc8d68b2b76f7710c52f8f1730461b2}} 
+\index{tester2.cpp@{tester2.cpp}!cumul\_xSqr@{cumul\_xSqr}}
+\index{cumul\_xSqr@{cumul\_xSqr}!tester2.cpp@{tester2.cpp}}
+\doxysubsubsection{\texorpdfstring{cumul\_xSqr}{cumul\_xSqr}}
+{\footnotesize\ttfamily double cumul\+\_\+x\+Sqr\mbox{[}\mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}}+1\mbox{]}}
+
+\mbox{\Hypertarget{tester2_8cpp_af806df204d620c0364f9572ff470ac38}\label{tester2_8cpp_af806df204d620c0364f9572ff470ac38}} 
+\index{tester2.cpp@{tester2.cpp}!cumul\_xy@{cumul\_xy}}
+\index{cumul\_xy@{cumul\_xy}!tester2.cpp@{tester2.cpp}}
+\doxysubsubsection{\texorpdfstring{cumul\_xy}{cumul\_xy}}
+{\footnotesize\ttfamily double cumul\+\_\+xy\mbox{[}\mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}}+1\mbox{]}}
+
+\mbox{\Hypertarget{tester2_8cpp_af942043bb8062c74e897f795b6de56ab}\label{tester2_8cpp_af942043bb8062c74e897f795b6de56ab}} 
+\index{tester2.cpp@{tester2.cpp}!cumul\_y@{cumul\_y}}
+\index{cumul\_y@{cumul\_y}!tester2.cpp@{tester2.cpp}}
+\doxysubsubsection{\texorpdfstring{cumul\_y}{cumul\_y}}
+{\footnotesize\ttfamily double cumul\+\_\+y\mbox{[}\mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}}+1\mbox{]}}
+
+\mbox{\Hypertarget{tester2_8cpp_a099b9f286471027106d682d1a555f44b}\label{tester2_8cpp_a099b9f286471027106d682d1a555f44b}} 
+\index{tester2.cpp@{tester2.cpp}!Error@{Error}}
+\index{Error@{Error}!tester2.cpp@{tester2.cpp}}
+\doxysubsubsection{\texorpdfstring{Error}{Error}}
+{\footnotesize\ttfamily double Error\mbox{[}\mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}}+1\mbox{]}\mbox{[}\mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}}+1\mbox{]}}
+
+\mbox{\Hypertarget{tester2_8cpp_a87154be74cc5896df90c2ba88acc2647}\label{tester2_8cpp_a87154be74cc5896df90c2ba88acc2647}} 
+\index{tester2.cpp@{tester2.cpp}!line\_intercept@{line\_intercept}}
+\index{line\_intercept@{line\_intercept}!tester2.cpp@{tester2.cpp}}
+\doxysubsubsection{\texorpdfstring{line\_intercept}{line\_intercept}}
+{\footnotesize\ttfamily double line\+\_\+intercept\mbox{[}\mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}}+1\mbox{]}\mbox{[}\mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}}+1\mbox{]}}
+
+\mbox{\Hypertarget{tester2_8cpp_a0c6d4056454e6bad5384616bd75b0880}\label{tester2_8cpp_a0c6d4056454e6bad5384616bd75b0880}} 
+\index{tester2.cpp@{tester2.cpp}!line\_slope@{line\_slope}}
+\index{line\_slope@{line\_slope}!tester2.cpp@{tester2.cpp}}
+\doxysubsubsection{\texorpdfstring{line\_slope}{line\_slope}}
+{\footnotesize\ttfamily double line\+\_\+slope\mbox{[}\mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}}+1\mbox{]}\mbox{[}\mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}}+1\mbox{]}}
+
+
+
+2D array storing the slope of the line between two points. 
+
+\mbox{\Hypertarget{tester2_8cpp_a3112916b60688229370d9b35d0dc0aa3}\label{tester2_8cpp_a3112916b60688229370d9b35d0dc0aa3}} 
+\index{tester2.cpp@{tester2.cpp}!optimal\_segment@{optimal\_segment}}
+\index{optimal\_segment@{optimal\_segment}!tester2.cpp@{tester2.cpp}}
+\doxysubsubsection{\texorpdfstring{optimal\_segment}{optimal\_segment}}
+{\footnotesize\ttfamily double optimal\+\_\+segment\mbox{[}\mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}}+1\mbox{]}}
+
+
+
+Array storing the optimal solution segment starting point for each point. 
+
+\mbox{\Hypertarget{tester2_8cpp_a1cf84905efbbdeed288cf810522b71b8}\label{tester2_8cpp_a1cf84905efbbdeed288cf810522b71b8}} 
+\index{tester2.cpp@{tester2.cpp}!optimal\_solution@{optimal\_solution}}
+\index{optimal\_solution@{optimal\_solution}!tester2.cpp@{tester2.cpp}}
+\doxysubsubsection{\texorpdfstring{optimal\_solution}{optimal\_solution}}
+{\footnotesize\ttfamily double optimal\+\_\+solution\mbox{[}\mbox{\hyperlink{tester2_8cpp_a3b8cb7c2cda80c18f333c00601c6905b}{MAX\+\_\+\+POINTS}}+1\mbox{]}}
+
+
+
+Array storing the optimal solution error for each point. 
+
